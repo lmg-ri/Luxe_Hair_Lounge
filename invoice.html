@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice - Luxe Hair Lounge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <h1>Invoice</h1>
+
+        <!-- Displaying the date of the transaction -->
+        <p><strong>Date:</strong> <span id="invoice-date"></span></p>
+
+        <!-- Displaying the services the customer ordered -->
+        <h2>Services Ordered:</h2>
+        <ul id="ordered-services" aria-labelledby="services-heading">
+            <!-- List of ordered services will be injected here by JavaScript -->
+        </ul>
+
+        <!-- Subtotal -->
+        <p><strong>Subtotal:</strong> $<span id="total-cost"></span></p>
+
+        <!-- Taxes -->
+        <p><strong>Taxes (15%):</strong> $<span id="taxes"></span></p>
+
+        <!-- Total -->
+        <h2><strong>Total:</strong> $<span id="total"></span></h2>
+
+        <!-- Buttons for user to exit or cancel the order -->
+        <div class="button-container">
+            <button onclick="exit()">Exit</button>
+            <button onclick="cancel()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

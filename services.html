@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Hair Lounge - Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Our Services</h1>
+    <div class="services-container">
+        <div class="service-item">
+            <img src="images/braidStyle.jpg" alt="Braiding">
+            <h2>Braiding</h2>
+            <u><p>Cost</p></u>
+            <p>Short: $4,000</p>
+            <p>Medium: $6,500</p>
+            <p>Long: $10,000</p>
+            <p>Experience the beauty of intricate braids tailored to your style.</p>
+            <input type="checkbox" class="service-checkbox" data-costs='{"short": 4000, "medium": 6500, "long": 10000}' data-name="Braiding">
+            <select class="size-select" aria-label="Select braiding size">
+                <option value="none">Select Size</option>
+                <option value="short">Short</option>
+                <option value="medium">Medium</option>
+                <option value="long">Long</option>
+            </select>
+        </div>
+        <div class="service-item">
+            <img src="images/haircut.jpg" alt="Haircut">
+            <h2>Haircut</h2>
+            <p>Cost: $2,500</p>
+            <p>Get a fresh look with our professional haircut services.</p>
+            <input onclick="calculateTotal()" type="checkbox" class="service-checkbox" data-cost="2500" data-name="Haircut">
+        </div>
+        <div class="service-item">
+            <img src="images/hairTreatment.jpg" alt="Hair Treatment">
+            <h2>Hair Treatment</h2>
+            <p>Cost: $3,500</p>
+            <p>Nourish and revitalize your hair with our specialized treatments.</p>
+            <input type="checkbox" class="service-checkbox" data-cost="3500" data-name="Hair Treatment">
+        </div>
+        <div class="service-item">
+            <img src="images/hairColor.jpg" alt="Hair Coloring">
+            <h2>Hair Coloring</h2>
+            <p>Cost: $4,000</p>
+            <p>Add a splash of color with our vibrant hair coloring services.</p>
+            <input type="checkbox" class="service-checkbox" data-cost="4000" data-name="Hair Coloring">
+        </div>
+        <div class="service-item">
+            <img src="images/straightening.jpg" alt="Hair Straightening">
+            <h2>Hair Straightening</h2>
+            <p>Cost: $6,000</p>
+            <p>Smooth and sleek styles with our professional straightening techniques.</p>
+            <input type="checkbox" class="service-checkbox" data-cost="6000" data-name="Hair Straightening">
+        </div>
+        <div class="service-item">
+            <img src="images/perm.jpg" alt="Perm">
+            <h2>Perm</h2>
+            <p>Cost: $3,000</p>
+            <p>Get long-lasting curls with our expert perm services.</p>
+            <input type="checkbox" class="service-checkbox" data-cost="3000" data-name="Perm">
+        </div>
+        <div class="service-item">
+            <img src="images/scalpMassage.jpg" alt="Scalp Massage">
+            <h2>Scalp Massage</h2>
+            <p>Cost: $2,000</p>
+            <p>Relax and rejuvenate with a soothing scalp massage.</p>
+            <input type="checkbox" class="service-checkbox" data-cost="2000" data-name="Scalp Massage">
+        </div>
+        <div class="service-item">
+            <img src="images/weddingStyling.jpg" alt="Wedding Styling">
+            <h2>Wedding Styling</h2>
+            <p>Cost: $10,000</p>
+            <p>Specialized hair styling for your big day, tailored to your vision.</p>
+            <input type="checkbox" class="service-checkbox" data-cost="10000" data-name="Wedding Styling">
+        </div>
+        <div class="service-item">
+            <img src="images/makeup.jpg" alt="Makeup Services">
+            <h2>Makeup Services</h2>
+            <u><p>Cost</p></u>
+            <p>Natural Look: $5,000</p>
+            <p>Complete your look with our professional makeup application services.</p>
+            <input type="checkbox" class="service-checkbox" data-cost="5000" data-name="Makeup Services">
+        </div>
+    </div>
+
+    <div class="total-container">
+        <h2>Total Cost: $<span id="total-cost">0</span></h2>
+    </div>
+
+    <div class="button-container">
+        <button id="checkout-button" onclick="checkout()">Check Out</button>
+        <button onclick="cancel()">Cancel</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
